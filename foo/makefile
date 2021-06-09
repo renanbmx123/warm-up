@@ -15,9 +15,10 @@ ifeq ($(OS),Windows_NT)
   endif
 	TARGET_EXTENSION=.exe
 else
-	CLEANUP = rm -f
+	CLEANUP = rm -f 
 	MKDIR = mkdir -p
 	TARGET_EXTENSION=.out
+	
 endif
 
 C_COMPILER=gcc
@@ -43,6 +44,8 @@ CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
 
 TARGET_BASE1=all_tests
+RGCOV =*.o cov* *.dSYM *.gcda *.gcno *.gcov
+clean:
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 SRC_FILES1=\
   $(UNITY_ROOT)/src/unity.c \
@@ -56,14 +59,22 @@ SYMBOLS=
 
 all: clean compile run
 
+foo: foo.c
+	$(GCC) $(GCCFLAGS) -o $@ $@.c
+
+cov: foo.c
+	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
+
+
 compile:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
+	
 
 run:
 	- ./$(TARGET1) -v
 
 clean:
-	$(CLEANUP) $(TARGET1)
+	$(CLEANUP) $(TARGET1) $(RGCOV)
 
 ci: CFLAGS += -Werror
 ci: compile
