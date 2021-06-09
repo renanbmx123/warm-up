@@ -21,7 +21,7 @@ int valid_f(char ch) {
     return 0;
 }
 
-int main(void) {
+int TestFunction(void) {
   char achar;
   int  length, valid_id;
   length = 0;
