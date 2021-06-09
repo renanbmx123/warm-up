@@ -18,5 +18,6 @@ install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 script:
   - cd Identifier; make
-  - cd foo; make
+  - cd Identifier; make cov
+  - cd Identifier; make cppcheck
 #  - make test
