@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3581800139">
+  <FileInfo check="ctu">
+<function-call call-id="Identifier/identifierAux.c:26:5" call-funcname="testFunction" call-argnr="1" file="Identifier/identifierAux.c" line="58" col="15" call-argexpr="teste1" call-argvaluetype="7" call-argvalue="7"/><function-call call-id="Identifier/identifierAux.c:26:5" call-funcname="testFunction" call-argnr="1" file="Identifier/identifierAux.c" line="59" col="15" call-argexpr="teste2" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="Identifier/identifierAux.c:26:5" call-funcname="testFunction" call-argnr="1" file="Identifier/identifierAux.c" line="60" col="15" call-argexpr="teste3" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="Identifier/identifierAux.c:26:5" call-funcname="testFunction" call-argnr="1" file="Identifier/identifierAux.c" line="62" col="15" call-argexpr="teste5" call-argvaluetype="7" call-argvalue="5"/><function-call call-id="Identifier/identifierAux.c:26:5" call-funcname="testFunction" call-argnr="1" file="Identifier/identifierAux.c" line="63" col="15" call-argexpr="teste6" call-argvaluetype="7" call-argvalue="3"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="Identifier/identifierAux.c:26:5" my-argnr="1" my-argname="teste" file="Identifier/identifierAux.c" line="29" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="Identifier/identifierAux.c:26:5" my-argnr="1" my-argname="teste" file="Identifier/identifierAux.c" line="29" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="valid_s" lineNumber="12"/>
+    <functiondecl functionName="valid_f" lineNumber="19"/>
+    <functiondecl functionName="testFunction" lineNumber="26"/>
+    <functiondecl functionName="main" lineNumber="50"/>
+    <functioncall functionName="achar"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="testFunction"/>
+    <functioncall functionName="teste"/>
+    <functioncall functionName="teste1"/>
+    <functioncall functionName="teste2"/>
+    <functioncall functionName="teste3"/>
+    <functioncall functionName="teste4"/>
+    <functioncall functionName="teste5"/>
+    <functioncall functionName="teste6"/>
+    <functioncall functionName="valid_f"/>
+    <functioncall functionName="valid_s"/>
+  </FileInfo>
+</analyzerinfo>

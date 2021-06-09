@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2263046806">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="valid_s" lineNumber="10"/>
+    <functiondecl functionName="valid_f" lineNumber="17"/>
+    <functiondecl functionName="testFunction" lineNumber="24"/>
+    <functioncall functionName="achar"/>
+    <functioncall functionName="fgetc"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="stdin"/>
+    <functioncall functionName="valid_f"/>
+    <functioncall functionName="valid_id"/>
+    <functioncall functionName="valid_s"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>
