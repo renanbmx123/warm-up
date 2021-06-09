@@ -63,11 +63,11 @@ foo: foo.c
 	$(GCC) $(GCCFLAGS) -o $@ $@.c
 
 cov: foo.c
-	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
+	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ foo.c
 
 
 compile:
-	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
+	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1) -fprofile-arcs -ftest-coverage -o $@ TestFoo.c
 	
 
 run:
